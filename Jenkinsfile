@@ -5,7 +5,7 @@ pipeline {
         stages {
             stage('Source') {
                 steps {
-                    git url: 'https://github.com/Manibharathi7/Repository2.git'
+                    git url: 'https://github.com/Manibharathi7/springboot.git'
                 }
             }
             stage('Build') {
