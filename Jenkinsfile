@@ -8,11 +8,10 @@ pipeline {
                     git url: 'https://github.com/Manibharathi7/springboot.git'
                 }
             }
-            stage('Docker bulid') {
-                steps {
-                    script {
-                        sh 'docker compose up -d --no-color --wait'
-                        sh 'docker compose ps'
+            stage('Build Docker Image') {  
+                steps{                     
+                   sh 'docker-compose build'    
+                    echo 'Docker-compose-build Build Image Completed'
                     }
                 }
             }
