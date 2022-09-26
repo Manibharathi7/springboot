@@ -8,8 +8,6 @@ pipeline {
                     git url: 'https://github.com/Manibharathi7/springboot.git'
                 }
             }
-            
-            }
             stage('Build') {
                 steps {
                     script {
