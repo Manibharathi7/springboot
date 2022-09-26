@@ -16,6 +16,7 @@ pipeline {
                         bat "${mvnHome}\\bin\\mvn -B verify"
                     }
                 }
+            }
                 stage('Build Docker Image') {  
                 steps{                     
                    bat 'docker-compose up'   
