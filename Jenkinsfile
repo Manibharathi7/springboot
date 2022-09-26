@@ -9,20 +9,19 @@ pipeline {
                 }
             }
             
+            }
             stage('Build') {
                 steps {
                     script {
                         def mvnHome = tool 'M3'
                         bat "${mvnHome}\\bin\\mvn -B verify"
                     }
-                }
-            }
-                stage('Build Docker Image') {  
+                }        
+            stage('Build Docker Image') {  
                 steps{                     
                    bat 'docker-compose up'   
                     }
                 }
-            }
             stage('SonarQube Analysis') {
                 steps {
                     script {
