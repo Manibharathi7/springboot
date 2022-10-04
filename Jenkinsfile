@@ -49,10 +49,12 @@ pipeline {
                     }
                 }
         }
-             stage('Build Docker Image') {  
-                steps{                     
+             stage('Build Docker Image') {
+                steps{                    
+                    script{
                    bat 'docker-compose up'   
                     }
                 }
+             }
         }
 }
